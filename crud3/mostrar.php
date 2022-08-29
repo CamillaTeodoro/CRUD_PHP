@@ -120,10 +120,10 @@
                         echo "CEP: " . $list2['zip_code'] . "<br>";
                     }
                     echo "<br>";
-                    echo '<button type="button" onclick="confirmDelete()" >Deletar Endereço</button> <br>';
+                    $id=$list2['id'];
+                    echo "<button type=\"button\" id=" . $id . " onclick=\"confirmDelete(" . $id . ")\" >Deletar Endereço</button> <br>";
                     echo "<hr>";
 
-                    $id=$list2['id'];
                     $employee_id=$list2['employee_id'];
                     
                 }
@@ -140,10 +140,11 @@
 
 
  <script>
-    const confirmDelete = () => {
+    const confirmDelete = function (address_id) {
+        //console.log(address_id);
         if(confirm("Tem certeza que deseja deletar esse endereço?")){
-            location.href = "deletar_endereco.php?id=<?=$id?>&employee_id=<?=$employee_id?>";
-        }
+           location.href = `deletar_endereco.php?id=${address_id}&employee_id=<?=$employee_id?>`;
+         }
 
     }
 
