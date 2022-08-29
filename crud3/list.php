@@ -21,8 +21,8 @@ if ($result = mysqli_query($link, $sql)) {
         echo '<a href="mostrar.php?id=' . $linha['id'] . '">'.$linha['name'].' </a>' . " - " ;
         //echo $linha['salary'] . "  ";
         echo '<a href="delete.php?id=' . $linha['id'] . '"><button type="button">Excluir</button></a>' . " - " ;
-        echo '<a href="visualizar.php?id=' . $linha['id'] . '"><button type="button">Editar</button></a> ' . " - ";
-        echo '<a href="preencher_endereco.php?id=' . $linha['id'] . '"><button type="button">Cadastrar Endereço</button></a> <br>';
+        echo '<a href="visualizar.php?id=' . $linha['id'] . '"><button type="button">Editar</button></a> <br>';
+        
 
 
     }

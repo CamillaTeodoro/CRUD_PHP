@@ -24,7 +24,7 @@
     mysqli_query($link,$sql);
     
     
-    header("Location: list.php");
+    header("Location: mostrar.php?id=$employee_id");
 
 
 ?>
